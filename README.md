@@ -22,3 +22,12 @@ a set of functions that will satisfy our needs in preprocessing data sets
 ```
 pip install --upgrade --force-reinstall  git+https://github.com/ioretcio/yolo-data-forge
 ```
+
+
+### About:
+
+(after installation)
+
+```
+
+```
