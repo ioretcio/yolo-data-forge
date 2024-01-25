@@ -3,12 +3,12 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project.scripts]
-empty_pictures = "empty_pictures.empty_pictures:empty_pictures"
-train_val_split = "train_val_split.train_val_split:train_val_split"
-big_image_to4parts = "big_image_to4parts.big_image_to4parts:big_image_to4parts"
-dataset_fingerprint = "dataset_fingerprint.fingerprint_creator:fingerprint_creator"
-similarity = "simalar_images_finder.similarity_test:similarity_test"
-db_intersect = "db_folder_intersection.db_folder_intersection:intersector"
+df_pairs = "empty_pictures.empty_pictures:empty_pictures"
+df_split = "train_val_split.train_val_split:train_val_split"
+df_4parts = "big_image_to4parts.big_image_to4parts:big_image_to4parts"
+df_hash_db = "dataset_fingerprint.fingerprint_creator:fingerprint_creator"
+df_decimator = "simalar_images_finder.similarity_test:similarity_test"
+df_hash_xf = "db_folder_intersection.db_folder_intersection:intersector"
 
 [project]
 name = "data-managment-toolbox"

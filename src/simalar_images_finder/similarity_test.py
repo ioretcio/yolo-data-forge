@@ -45,7 +45,5 @@ def similarity_test():
     print(duplicates_images)
     for score, image_id1, image_id2 in duplicates_images:
         if os.path.isfile(os.path.join(source_images,images_names[image_id2])):
-            
-            print( os.path.join(source_images,images_names[image_id2]), os.path.join(targetPath, images_names[image_id2]  )  )
             shutil.move ( os.path.join(source_images,images_names[image_id2]), os.path.join(targetPath, images_names[image_id2]  ))
             
