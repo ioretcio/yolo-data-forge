@@ -13,8 +13,6 @@ a set of functions that will satisfy our needs in preprocessing data sets
 - [ ] convert dota-labelimg
 - [ ] convert obb-labelimg
 - [ ] convert yolo-labelimg
-- [ ] convert 
-- [ ] req.txt......
 
 ### Installation and updating:
 
@@ -26,8 +24,8 @@ pip install --upgrade --force-reinstall  git+https://github.com/ioretcio/yolo-da
 
 ### About:
 
-(after installation)
+(after installation. Without python.. stuff)
 
 ```
-
+df_about
 ```

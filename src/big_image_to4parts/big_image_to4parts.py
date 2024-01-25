@@ -18,29 +18,12 @@ def split4(image, image_path, image_new_path):
     patch_width = img_width//2
     patch_height = img_height//2
 
-    piece = im.crop((0, 0, patch_width, patch_height))
-    img = Image.new('RGB', (patch_width, patch_height), 255)
-    img.paste(piece)
-    path = os.path.join(image_new_path, f"{image.split('.')[0]}-{0}.png")
-    img.save(path)
-
-    piece = im.crop((patch_width, 0, img_width, patch_height))
-    img = Image.new('RGB', ( img_width-patch_width, patch_height), 255)
-    img.paste(piece)
-    path = os.path.join(image_new_path, f"{image.split('.')[0]}-{1}.png")
-    img.save(path)
-
-    piece = im.crop((0, patch_height, patch_width, img_height))
-    img = Image.new('RGB', (patch_width, img_height- patch_height), 255)
-    img.paste(piece)
-    path = os.path.join(image_new_path, f"{image.split('.')[0]}-{2}.png")
-    img.save(path)
-
-    piece = im.crop((patch_width, patch_height, img_width, img_height))
-    img = Image.new('RGB', (img_width- patch_width,img_height-patch_height), 255)
-    img.paste(piece)
-    path = os.path.join(image_new_path, f"{image.split('.')[0]}-{3}.png")
-    img.save(path)
+    for i in range(4):
+        piece = im.crop((i % 2 * patch_width, i // 2 * patch_height, (i % 2 + 1) * patch_width, (i // 2 + 1) * patch_height))
+        img = Image.new('RGB', (patch_width if i % 2 == 0 else img_width - patch_width, patch_height if i // 2 == 0 else img_height - patch_height), 255)
+        img.paste(piece)
+        path = os.path.join(image_new_path, f"{image.split('.')[0]}-{i}.png")
+        img.save(path)
 
     print(os.path.join(image_path, image) + ' done ')
 def big_image_to4parts():
