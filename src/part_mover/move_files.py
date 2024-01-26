@@ -8,7 +8,7 @@ def move_files():
         description='Moves only specific part of data to another folder(sorted by name). Can be helpful in pack creation.')
 
     parser.add_argument('--source', "-s", help="source directory")
-    parser.add_argument('--', "-d", help="destination directory")
+    parser.add_argument('--destination', "-d", help="destination directory")
     parser.add_argument('--number', "-n", help="Number of files to move")
     args = parser.parse_args()
     source_path = args.source

@@ -12,7 +12,6 @@ def dir_path(string:str):
     else:
         raise NotADirectoryError(string)
 
-
 def similarity_test():
     parser = argparse.ArgumentParser(
         description='Analyzes the structure of the images and discards those that have copies in the set to a separate directory')
