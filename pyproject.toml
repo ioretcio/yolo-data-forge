@@ -10,6 +10,9 @@ df_hash_db = "dataset_fingerprint.fingerprint_creator:fingerprint_creator"
 df_decimator = "simalar_images_finder.similarity_test:similarity_test"
 df_hash_xf = "db_folder_intersection.db_folder_intersection:intersector"
 df_about = "dataforge.about:about"
+df_partmove = "part_mover.part_mover:move_files"
+
+
 
 [project]
 name = "yolo-data-forge"
