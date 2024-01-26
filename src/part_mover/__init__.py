@@ -1,1 +1,1 @@
-from .part_mover import move_files
+from .move_files import move_files
