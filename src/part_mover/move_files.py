@@ -13,7 +13,7 @@ def move_files():
     args = parser.parse_args()
     source_path = args.source
     dest_path = args.destination
-    number = args.number
+    number = int(args.number)
     
     files_to_move = os.listdir(source_path)
     files_to_move = sorted(files_to_move)[:number]
