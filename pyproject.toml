@@ -12,8 +12,8 @@ df_hash_xf = "db_folder_intersection.db_folder_intersection:intersector"
 df_about = "dataforge.about:about"
 
 [project]
-name = "data-managment-toolbox"
-version = "0.0.4"
+name = "yolo-data-forge"
+version = "0.0.5"
 authors = [
   { name="ioretcio", email="goncharukyou@example.com" },
 ]

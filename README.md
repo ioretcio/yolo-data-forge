@@ -1,6 +1,6 @@
 # data-managment-toolbox
 
-a set of functions that will satisfy our needs in preprocessing data sets
+Yolo Data Forge is a specialized toolkit tailored for YOLO (You Only Look Once) object detection models, offering a robust set of tools for crafting, refining, and augmenting datasets. This tool suite facilitates the preparation of annotated data, enabling smoother training and enhanced accuracy for YOLO-based artificial intelligence applications.
 
 ### Progress
 
