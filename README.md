@@ -7,9 +7,11 @@ Yolo Data Forge is a specialized toolkit tailored for YOLO (You Only Look Once) 
 - [x] empty pictures finder
 - [x] train-val-test splitter
 - [x] 4k to fullHD patcher (1to4)
-- [ ] huge images pather to fixSized patches
+- [x] part_mover
 - [x] dataset fingerprint creator
 - [x] structural similarity test
+- [x] description
+- [ ] huge images pather to fixSized patches
 - [ ] convert dota-labelimg
 - [ ] convert obb-labelimg
 - [ ] convert yolo-labelimg

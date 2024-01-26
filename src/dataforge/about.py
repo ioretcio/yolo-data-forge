@@ -5,3 +5,4 @@ def about():
     print(f"{'df_hash_db'.ljust(15)} Creates a database of datasets images hashes (path-MD5hash)")
     print(f"{'df_decimator'.ljust(15)} Analyzes the structure of the images and discards those that have copies to a separate directory")
     print(f"{'df_hash_xf'.ljust(15)} Finds the intersection of hashes from database and images in folder")
+    print(f"{'df_partmove'.ljust(15)} Moves only specific part of data to another folder(sorted by name). Can be helpful in pack creation.")
