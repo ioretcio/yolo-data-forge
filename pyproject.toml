@@ -12,7 +12,7 @@ df_hash_dxf = "db_folder_intersection.db_folder_intersection:intersector"
 df_about = "dataforge.about:about"
 df_partmove = "part_mover.move_files:move_files"
 df_sizes_dump = "sorted_filesizes_txt.sorted_filesizes_txt:sorted_filesizes_txt"
-df_yolo2labelimg_obb = "converters.sorted_filesizes_txt.sorted_filesizes_txt:convett"
+df_yolo2labelimg_obb = "converters.yolo2labelimg_obb.yolo2labelimg_obb:convert"
 
 
 [project]
