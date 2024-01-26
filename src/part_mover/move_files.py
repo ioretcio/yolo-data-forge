@@ -19,7 +19,7 @@ def move_files():
     files_to_move = sorted(files_to_move)[:number]
 
     if not os.path.exists(dest_path):
-        os.mkdir(dest_path)
+        os.makedirs(dest_path)
     
     
     for file in files_to_move:
