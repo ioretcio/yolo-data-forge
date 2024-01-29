@@ -65,10 +65,10 @@ def decimator():
                 encoded_image = model.encode([current, compareToImage], batch_size=8, convert_to_tensor=True)
                 processed_images = util.paraphrase_mining_embeddings(encoded_image)
                 if(processed_images[0][0] > threshold):
+                    print(f"Deleting {os.path.join(source_images, file)}")
                     os.remove(  os.path.join(source_images, file))
                     delcounter+=1
-                else:
-                    os.remove(os.path.join(source_images, file))
+                    
                 counter += 1
                 compareToImage = current
             except Exception as E:
