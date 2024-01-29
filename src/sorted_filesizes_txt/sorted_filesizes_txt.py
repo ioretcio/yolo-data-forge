@@ -12,7 +12,7 @@ def sorted_filesizes_txt():
     for root, dirs, files in os.walk(source_folder):
         for file in files:
             file_path = os.path.relpath(os.path.join(root, file), start=source_folder)
-            file_sizes[file] = os.path.getsize(file_path)
+            file_sizes[file_path] = os.path.getsize(os.path.join(source_folder, file_path))
     
     file_sizes = dict(sorted(file_sizes.items(), key=lambda item: item[1], reverse=True))
 
@@ -20,3 +20,5 @@ def sorted_filesizes_txt():
     with open(f'{source_folder_name}_file_sizes.txt', 'w') as file:
         for key, value in file_sizes.items():
             file.write(f"{key}: {value}\n")
+
+sorted_filesizes_txt()
