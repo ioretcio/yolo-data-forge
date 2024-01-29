@@ -1,4 +1,3 @@
-import shutil
 import os
 import argparse
 from sentence_transformers import SentenceTransformer, util

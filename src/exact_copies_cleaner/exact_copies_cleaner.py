@@ -43,8 +43,8 @@ def exact_cleaner():
                 cv2.imread( os.path.join( directory_path, data[i][0]) ),\
                 cv2.imread(os.path.join( directory_path,data[i+1][0])), data[i][0] )
             if similarity:
-                print(f"deleting {data[i][0] } bacause {data[i+1][0]} looks same")
-                os.remove(data[i][0])
+                print(f"deleting { os.path.join( directory_path, data[i][0]) } bacause { os.path.join( directory_path, data[i+1][0])} looks same")
+                os.remove(os.path.join( directory_path, data[i][0]))
                 del data[i]
                 count +=1
                 
