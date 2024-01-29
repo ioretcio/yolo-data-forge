@@ -4,7 +4,7 @@ from sentence_transformers import SentenceTransformer, util
 from PIL import Image
 import os
 
-model = SentenceTransformer('clip-ViT-B-32')
+
 def dir_path(string:str):
     if os.path.isdir(string):
         return string
@@ -44,6 +44,7 @@ def decimator():
     
     
     data = sorted_filesizes(source_images)
+    model = SentenceTransformer('clip-ViT-B-32')
     totalLen  = len(data)
     counter = 0
     delcounter = 0
