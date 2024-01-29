@@ -50,4 +50,3 @@ def exact_cleaner():
                 count +=1
                 
     print(f"{count} files was deleted")
-exact_cleaner()
