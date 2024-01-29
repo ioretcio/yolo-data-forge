@@ -12,14 +12,15 @@ Yolo Data Forge is a specialized toolkit tailored for YOLO (You Only Look Once) 
 - [x] dataset fingerprint creator
 - [x] dataset fingerprint database_x_folder intersection
 
-- [x] structural similarity test
+
 
 - [x] convert obb-labelimg
 - [ ] convert yolo-labelimg
 - [ ] convert dota-labelimg
 
-- [x] sorted filesizes dump
 - [x] exact copies cleaner 
+- [x] structural similarity test (DECIMATOR)
+
 
 - [ ] huge images pather to fixSized patches
 

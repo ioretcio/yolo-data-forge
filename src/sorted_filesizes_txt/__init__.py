@@ -1,1 +1,0 @@
-from .sorted_filesizes_txt import sorted_filesizes_txt
