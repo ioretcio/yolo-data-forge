@@ -46,4 +46,5 @@ def exact_cleaner():
             if similarity:
                 print(f"deleting {data[i][0] } bacause {data[i+1][0]} looks same")
                 os.remove(data[i][0])
+                del data[i]
 exact_cleaner()
