@@ -6,6 +6,7 @@ def about():
     print(f"\t{'df_decimator'.ljust(15)} Analyzes the structure of the images and discards those that have copies to a separate directory")
     print(f"\t{'df_hash_xf'.ljust(15)} Finds the intersection of hashes from database and images in folder")
     print(f"\t{'df_partmove'.ljust(15)} Moves only specific part of data to another folder(sorted by name). Can be helpful in pack creation.")
+    print(f"\t{'df_latin'.ljust(15)} This program recursively translits filenames from cyrrilic to latin (and wipes strange unicode symbols).")
     print(f"\t{'df_partmove'.ljust(15)} Moves only specific part of data to another folder(sorted by name). Can be helpful in pack creation.")
     print("\nExact copies cleaner")
     print(f"\t1-{'df_sizes_dump'.ljust(15)} Creates a txt file with recursively found and sorted by size files in selected directory.")

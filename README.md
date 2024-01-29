@@ -8,6 +8,7 @@ Yolo Data Forge is a specialized toolkit tailored for YOLO (You Only Look Once) 
 - [x] train-val-test splitter
 - [x] 4k to fullHD patcher (1to4)
 - [x] part_mover
+- [x] recursively latinizer
 - [x] dataset fingerprint creator
 - [x] dataset fingerprint database_x_folder intersection
 

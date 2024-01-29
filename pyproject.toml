@@ -7,6 +7,7 @@ df_pairs = "empty_pictures.empty_pictures:empty_pictures"
 df_split = "train_val_split.train_val_split:train_val_split"
 df_4parts = "big_image_to4parts.big_image_to4parts:big_image_to4parts"
 df_partmove = "part_mover.move_files:move_files"
+df_latin = "latinizer.latinizer:recursively_translit"
 
 df_hash_db = "dataset_fingerprint.fingerprint_creator:fingerprint_creator"
 df_hash_dxf = "db_folder_intersection.db_folder_intersection:intersector"
