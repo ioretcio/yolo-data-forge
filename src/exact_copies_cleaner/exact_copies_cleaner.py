@@ -38,7 +38,3 @@ def exact_cleaner():
                 print(f"deleting {data[i][0] } bacause {data[i+1][0]} looks same")
                 del data[i]
                 os.remove(data[i][0])
-
-    with open('modified_file.txt', 'w') as other_file:
-        for item in data:
-            other_file.write(f"{item[0]}: {item[1]}\n")
