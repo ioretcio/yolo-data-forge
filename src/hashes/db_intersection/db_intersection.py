@@ -20,7 +20,7 @@ def create_connection(db_file):
     finally:
         return conn
 
-def intersector():
+def intersect():
     parser = argparse.ArgumentParser(
         description='Splits images and annotations in a selected percentage configuration across training, validation, and test folders')
 
