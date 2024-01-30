@@ -23,8 +23,11 @@ def deleter():
 
     for filetodel in files_to_delete:
         try:
-            print(f"Deleting {file_dict[filetodel]}", end=' ')
-            os.remove(file_dict[filetodel])
-            print("ok!")
+            if os.path.exists(file_dict[filetodel]):
+                print(f"Deleting {file_dict[filetodel]}", end=' ')
+                os.remove(file_dict[filetodel])
+                print("ok!")
+            else:
+                print(f"File {file_dict[filetodel]} does not exist")
         except Exception as e:
             print(str(e))
