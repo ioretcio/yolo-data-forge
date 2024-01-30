@@ -3,9 +3,8 @@ import hashlib
 from PIL import Image
 import sqlite3
 from sqlite3 import Error
-import sys
 import argparse
-
+import time
 
 def dir_path(string):
     if os.path.isdir(string):
@@ -25,7 +24,7 @@ def create_connection(db_file):
 
 def intersect():
     parser = argparse.ArgumentParser(
-        description='Splits images and annotations in a selected percentage configuration across training, validation, and test folders')
+        description='Finds intersection of db and folder and creates purge.txt file with to-delete-candidates')
 
     parser.add_argument('--source_folder', "-i", type=dir_path, help="source images directory")
     parser.add_argument('--source_db', "-d", type=dir_path, help="source database (sqlite) directory")
@@ -41,7 +40,7 @@ def intersect():
     count = 0
     count2 = 0
     allcount = len(os.listdir(candidat))
-    with open('need_to_delete.txt', 'w') as f:
+    with open(f'purge{int(time.time())}.txt', 'w') as f:
         for image in os.listdir(candidat):
             try:
                 c.execute(f""" SELECT filename from files WHERE hashcode='{hashlib.md5(Image.open(  os.path.join( candidat, image)).tobytes()).hexdigest()}'; """)

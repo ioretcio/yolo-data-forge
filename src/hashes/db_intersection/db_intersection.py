@@ -2,7 +2,7 @@ import os
 import sqlite3
 from sqlite3 import Error
 import argparse
-
+import time
 
 def dir_path(string):
     if os.path.isdir(string):
@@ -22,7 +22,7 @@ def create_connection(db_file):
 
 def intersect():
     parser = argparse.ArgumentParser(
-        description='Splits images and annotations in a selected percentage configuration across training, validation, and test folders')
+        description='Finds intersection of two dbs and creates purge.txt file with to-delete-candidates')
 
     parser.add_argument('--first_db', "-f", help="source database (sqlite) directory 1")
     parser.add_argument('--second_db', "-s", help="source database (sqlite) directory 2")
@@ -50,7 +50,7 @@ def intersect():
     
 
 
-    with open('need_to_delete.txt', 'w') as f:
+    with open(f'purge{int(time.time())}.txt', 'w') as f:
         for pair in first_data:
             try:
                 c2.execute(f""" SELECT filename from files WHERE hashcode='{pair[1]}'; """)
