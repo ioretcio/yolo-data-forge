@@ -10,7 +10,7 @@ df_partmove = "part_mover.move_files:move_files"
 df_latin = "latinizer.latinizer:recursively_translit"
 
 df_hash_db = "hashes.dataset_fingerprint.fingerprint_creator:fingerprint_creator"
-df_hash_dxf = "hashes.db_folder_intersection.db_folder_intersection:intersector"
+df_hash_dxf = "hashes.db_folder_intersection.db_folder_intersection:intersect"
 df_db_intersection = "hashes.db_intersection.db_intersection:intersect"
 
 df_yolo2labelimg_obb = "converters.yolo2labelimg_obb.yolo2labelimg_obb:convert"

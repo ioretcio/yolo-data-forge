@@ -1,1 +1,1 @@
-from .db_folder_intersection import intersector
+from .db_folder_intersection import intersect
