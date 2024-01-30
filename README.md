@@ -9,6 +9,8 @@ Yolo Data Forge is a specialized toolkit tailored for YOLO (You Only Look Once) 
 
 ##	Progress
 
+							common:
+
 - [x] empty pictures finder
 
 - [x] train-val-test splitter
@@ -44,7 +46,9 @@ Yolo Data Forge is a specialized toolkit tailored for YOLO (You Only Look Once) 
 - [x] exact copies cleaner
 
 - [x] structural similarity test (DECIMATOR)
+
 							help:
+
 - [x] description (updating)
 
 ### Installation and updating:
