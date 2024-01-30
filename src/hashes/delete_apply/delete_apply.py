@@ -22,6 +22,9 @@ def deleter():
         files_to_delete = [os.path.basename(line.strip()) for line in f.readlines()]
 
     for filetodel in files_to_delete:
-        print(f"Deleting {file_dict[filetodel]}", end=' ')
-        os.remove(file_dict[filetodel])
-        print("ok!")
+        try:
+            print(f"Deleting {file_dict[filetodel]}", end=' ')
+            os.remove(file_dict[filetodel])
+            print("ok!")
+        except Exception as e:
+            print(str(e))
