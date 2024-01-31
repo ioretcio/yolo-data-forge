@@ -31,6 +31,8 @@ Yolo Data Forge is a specialized toolkit tailored for YOLO (You Only Look Once) 
  
 - [x] script to add extensions to broken files
 
+- [x] Count of labels (OBB format) for each class
+
 							hash db:
 
 - [x] dataset fingerprint creator
