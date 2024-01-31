@@ -41,6 +41,8 @@ Yolo Data Forge is a specialized toolkit tailored for YOLO (You Only Look Once) 
 
 - [x] deleter all dublicates files from purgelist.txt
 
+- [x] merge .dbs
+
 							converts:
 
 - [x] convert obb-labelimg
