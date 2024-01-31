@@ -25,6 +25,12 @@ Yolo Data Forge is a specialized toolkit tailored for YOLO (You Only Look Once) 
 
 - [x] brightness sort
 
+- [x] total video duration in folder
+
+- [x] carefully folder merger
+ 
+- [x] script to add extensions to broken files
+
 							hash db:
 
 - [x] dataset fingerprint creator
