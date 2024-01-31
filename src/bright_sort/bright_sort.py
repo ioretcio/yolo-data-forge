@@ -19,18 +19,13 @@ def sort():
                 image = cv2.imread(image_path)
                 average_brightness = int(np.mean(cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)))
                 average_brightnesses[file] = average_brightness
-    print(average_brightnesses)
-    sorted_image_info = dict(sorted(average_brightnesses.items(), key=lambda item: item[1]))
-    print(sorted_image_info)
 
+    sorted_image_info = dict(sorted(average_brightnesses.items(), key=lambda item: item[1]))
     newnames = {}
     counter = 0
     for key in sorted_image_info.keys():
         counter+=1
         newnames[key] = f"{   str(counter).zfill(10) }.{key.split('.')[-1]}"
-    print(newnames)
-    
-    
     for old_name, new_name in newnames.items():
         if os.path.exists(os.path.join(directory_path, old_name)):
             os.rename(os.path.join(directory_path, old_name), os.path.join(directory_path, new_name))
