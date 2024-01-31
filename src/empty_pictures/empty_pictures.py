@@ -79,6 +79,3 @@ def empty_pictures():
     print(f"{images_without_extension_count}-images without label!"
           f"\n{labels_without_extension_count}-labels without image!")
     print(f'All result moved to {os.path.join(label_dir, "single")} and {os.path.join(image_dir, "single")} folders')
-
-
-empty_pictures()
