@@ -23,6 +23,8 @@ Yolo Data Forge is a specialized toolkit tailored for YOLO (You Only Look Once) 
 
 - [ ] huge images pather to fixSized patches
 
+- [x] brightness sort
+
 							hash db:
 
 - [x] dataset fingerprint creator

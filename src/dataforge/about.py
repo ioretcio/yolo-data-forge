@@ -15,3 +15,4 @@ def about():
     print(f"\t{'df_hash_db'.ljust(15)} Creates a database of datasets images hashes (path-MD5hash)")
     print(f"\t{'df_hash_xf'.ljust(15)} Finds the intersection of hashes from database and images in folder")
     print(f"\t{'df_db_intersection'.ljust(15)} Finds the intersection of hashes from two databases and creates need_to_delete.txt file with list of dubles.")
+    print(f"\t{'df_bright_sort'.ljust(15)} Sorts(renames with numbers) images by its brightness and returns afterwork.")
