@@ -29,7 +29,7 @@ df_about = "dataforge.about:about"
 
 [project]
 name = "yolo-data-forge"
-version = "0.2.4"
+version = "0.2.5"
 authors = [
   { name="ioretcio", email="goncharukyou@example.com" },
 ]

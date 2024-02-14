@@ -16,10 +16,13 @@ def sort():
         for file in files:
             if file.lower().endswith(('.jpg', '.jpeg', '.png')):
                 image_path = os.path.join(root, file)
+                
                 image = cv2.imread(image_path)
-                average_brightness = int(np.mean(cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)))
-                average_brightnesses[file] = average_brightness
-
+                if np.any(image):  
+                    average_brightness = int(np.mean(cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)))
+                    average_brightnesses[file] = average_brightness
+                else: print("Unable to load image at path {}".format(image_path))
+                    
     sorted_image_info = dict(sorted(average_brightnesses.items(), key=lambda item: item[1]))
     newnames = {}
     counter = 0

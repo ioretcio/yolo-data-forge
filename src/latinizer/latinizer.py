@@ -24,6 +24,16 @@ def translit(text):
     to_remove = ['\u0096', '\u0094', '\u0306', '\x80', '\x81', '\x8f', '\u044b', '\uff5c'] #it will grow...
     translation_table = str.maketrans("", "", "".join(to_remove))
     text = text.translate(translation_table)
+    
+
+    whitelist = [chr(i) for i in range(65, 91)] + [chr(i) for i in range(97, 123)] + [chr(i) for i in range(32, 48)]
+    whitelist += ([chr(i) for i in range(58, 65)] + [chr(i) for i in range(91, 97)] + [chr(i) for i in range(123, 127)])
+    whitelist += [chr(i) for i in range(48, 58)]  # Adding digits to the whitelist
+    text = ''.join([char if char in whitelist else '_' for char in text])
+    
+    
+    
+    
     return text
 
 def recursively_translit():

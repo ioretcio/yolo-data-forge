@@ -30,8 +30,12 @@ def empty_pictures():
     start_time = time.time()
     print("Forming labels list")
     for label in labels:
-        if label.split('.')[-1] != "ini" and label.split('.')[-2] != "classes" and not "current_config" in label:
-            labels_dict[".".join(label.split('.')[:-1])] = label
+        splitted = label.split('.')
+        if "ini" in splitted: continue
+        if "current_config" in splitted: continue
+        if "classes" in splitted: continue
+        if len(splitted)<2: print(f"No extension in file {label}") 
+        labels_dict[".".join(label.split('.')[:-1])] = label
     print(f"Labels list formed in {time.time() - start_time} seconds")
     
     

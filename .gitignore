@@ -2,7 +2,8 @@
 /dist
 /build
 /future
-
+/.vs
+/.idea
 
 dependency_links.txt
 entry_points.txt

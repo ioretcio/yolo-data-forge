@@ -6,11 +6,6 @@ from sqlite3 import Error
 import argparse
 import time
 
-def dir_path(string):
-    if os.path.isdir(string):
-        return string
-    else:
-        raise NotADirectoryError(string)
 
 def create_connection(db_file):
     """ create a database connection to a SQLite database """
@@ -26,8 +21,8 @@ def intersect():
     parser = argparse.ArgumentParser(
         description='Finds intersection of db and folder and creates purge.txt file with to-delete-candidates')
 
-    parser.add_argument('--source_folder', "-i", type=dir_path, help="source images directory")
-    parser.add_argument('--source_db', "-d", type=dir_path, help="source database (sqlite) directory")
+    parser.add_argument('--source_folder', "-i", help="source images directory")
+    parser.add_argument('--source_db', "-d" , help="source database (sqlite) directory")
 
     args = parser.parse_args()
     candidat = args.source_folder
@@ -37,7 +32,7 @@ def intersect():
     c.execute(f""" update files set hashcode = replace(hashcode,'\n',''); """)
 
     
-    count = 0
+    count = 1
     count2 = 0
     allcount = len(os.listdir(candidat))
     with open(f'purge{int(time.time())}.txt', 'w') as f:
@@ -54,3 +49,4 @@ def intersect():
                 print(e)
     print(count2/count)
     
+intersect()
