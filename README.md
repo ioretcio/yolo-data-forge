@@ -25,6 +25,8 @@ Yolo Data Forge is a specialized toolkit tailored for YOLO (You Only Look Once) 
 
 - [x] brightness sort
 
+- [x] Laplacian (detalization) sort
+
 - [x] total video duration in folder
 
 - [x] carefully folder merger
@@ -32,6 +34,8 @@ Yolo Data Forge is a specialized toolkit tailored for YOLO (You Only Look Once) 
 - [x] script to add extensions to broken files
 
 - [x] Count of labels (OBB format) for each class
+
+- [x] Packs creator for images and labels
 
 							hash db:
 

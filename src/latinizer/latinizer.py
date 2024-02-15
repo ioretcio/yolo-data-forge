@@ -69,5 +69,3 @@ def recursively_translit():
                 os.rename(os.path.join(root, file), os.path.join(root, new_name))
                 count+=1
     print(f"Renamed {count} files")
-                
-recursively_translit()

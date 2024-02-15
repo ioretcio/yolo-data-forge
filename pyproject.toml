@@ -9,6 +9,7 @@ df_4parts = "big_image_to4parts.big_image_to4parts:big_image_to4parts"
 df_partmove = "part_mover.move_files:move_files"
 df_latin = "latinizer.latinizer:recursively_translit"
 df_bright_sort = "bright_sort.bright_sort:sort"
+df_laplac_sort = "laplac_sort.laplac_sort:sort"
 df_video_duration = "video_duration.video_duration:duration"
 df_extadd = "add_extension.add_extension:add_extension"
 df_carmerge = "careful_merger.careful_merger:merge"
@@ -24,6 +25,8 @@ df_yolo2labelimg_obb = "converters.yolo2labelimg_obb.yolo2labelimg_obb:convert"
 
 df_exact_copies = "exact_copies_cleaner.exact_copies_cleaner:exact_cleaner"
 df_decimator = "decimator.decimator:decimator"
+
+df_packer = "packer.packer:packer"
 
 df_about = "dataforge.about:about"
 
