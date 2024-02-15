@@ -50,7 +50,6 @@ def recursively_translit():
             new_name = translit(file)
             if os.path.join(root, file)== os.path.join(root, new_name): continue
             if not force_rename:
-                print(f"{force_rename} not True")
                 if input(f"(y/n) Do you want to rename {os.path.join(root, file)} to {os.path.join(root, new_name)}?").lower() in ['y', 'yes']:
                     os.rename(os.path.join(root, file), os.path.join(root, new_name))
                     count+=1

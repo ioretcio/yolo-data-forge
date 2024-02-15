@@ -11,7 +11,7 @@ def dir_path(string:str):
     else:
         raise NotADirectoryError(string)
 
-def sorted_filesizes(source_folder):
+def sorted_filesizes(source_folder, sort):
     file_sizes = {}
     for root, dirs, files in os.walk(source_folder):
         for file in files:
@@ -19,8 +19,8 @@ def sorted_filesizes(source_folder):
                 file_path = os.path.relpath(os.path.join(root, file), start=source_folder)
                 file_sizes[file_path] = os.path.getsize(os.path.join(source_folder, file_path))
             
-    
-    file_sizes = dict(sorted(file_sizes.items(), key=lambda item: item[1], reverse=True))
+    if sort:
+        file_sizes = dict(sorted(file_sizes.items(), key=lambda item: item[1], reverse=True))
     result = []
     for key, value in file_sizes.items():
         result.append([key, value])
@@ -33,8 +33,9 @@ def decimator():
 
     parser.add_argument('--source_images', "-d", type=dir_path, help="source images directory")
     parser.add_argument('--threshold', "-t", type=float, help="threshold of similarity (everything above is thrown into the 'duplicates' folder )")
-
+    parser.add_argument('--sort','-s',action='store_true', help="Sort by size files during process")
     
+    sort = args.sort
     
     args = parser.parse_args()
     threshold = float(args.threshold)
@@ -43,7 +44,7 @@ def decimator():
 
     
     
-    data = sorted_filesizes(source_images)
+    data = sorted_filesizes(source_images, sort)
     model = SentenceTransformer('clip-ViT-B-32')
     totalLen  = len(data)
     counter = 0
