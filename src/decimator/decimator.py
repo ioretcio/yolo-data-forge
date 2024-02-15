@@ -18,9 +18,11 @@ def sorted_filesizes(source_folder, sort):
             if file.lower().endswith(('.jpg', '.jpeg', '.png', '.gif')):
                 file_path = os.path.relpath(os.path.join(root, file), start=source_folder)
                 file_sizes[file_path] = os.path.getsize(os.path.join(source_folder, file_path))
-            
+    print("Sorting status {sort}")
     if sort:
         file_sizes = dict(sorted(file_sizes.items(), key=lambda item: item[1], reverse=True))
+    else:
+        file_sizes = sorted(file_sizes.keys())
     result = []
     for key, value in file_sizes.items():
         result.append([key, value])
