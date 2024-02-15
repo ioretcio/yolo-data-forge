@@ -62,13 +62,11 @@ def decimator():
             continue
         else:
             try:
-                if(counter %1000 == 0):
-                    print(f"{counter} ~ {round(100*(counter/totalLen ))}%, {delcounter} deleted")
                 current  = Image.open( os.path.join(source_images, file))
                 encoded_image = model.encode([current, compareToImage], batch_size=8, convert_to_tensor=True)
                 processed_images = util.paraphrase_mining_embeddings(encoded_image)
                 if(processed_images[0][0] > threshold):
-                    print(f"Deleting {os.path.join(source_images, file)}")
+                    print(f"Deleting {os.path.join(source_images, file)}. Deleted total {delcounter} and {totalLen-counter} left")
                     os.remove(  os.path.join(source_images, file))
                     delcounter+=1
                     
