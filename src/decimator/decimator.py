@@ -35,9 +35,11 @@ def decimator():
     parser.add_argument('--threshold', "-t", type=float, help="threshold of similarity (everything above is thrown into the 'duplicates' folder )")
     parser.add_argument('--sort','-s',action='store_true', help="Sort by size files during process")
     
-    sort = args.sort
+    
     
     args = parser.parse_args()
+    
+    sort = args.sort
     threshold = float(args.threshold)
     source_images = args.source_images
 

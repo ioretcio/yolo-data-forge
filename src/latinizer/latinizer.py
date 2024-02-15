@@ -1,5 +1,8 @@
 import argparse
 import os
+import random
+import string
+
 
 def translit(text):
     cyrillic_to_latin = {
@@ -54,6 +57,15 @@ def recursively_translit():
                     os.rename(os.path.join(root, file), os.path.join(root, new_name))
                     count+=1
             else:
+                while True:
+                    if os.path.exists(os.path.join(root, new_name)):
+                        filename_parts = os.path.splitext(new_name)
+                        basename = filename_parts[0]
+                        extension = filename_parts[1]
+                        random_letter = random.choice(string.ascii_letters)
+                        new_name = f"{basename}{random_letter}{extension}"
+                    else: break
+                    
                 os.rename(os.path.join(root, file), os.path.join(root, new_name))
                 count+=1
     print(f"Renamed {count} files")
