@@ -3,7 +3,7 @@ import argparse
 
 
 
-def count(directory):
+def count():
     classes = dict()
     classnames = dict()
     
