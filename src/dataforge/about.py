@@ -5,7 +5,6 @@ def about():
     print(f"\t{'df_decimator'.ljust(15)} Analyzes the structure of the images and discards those that have copies to a separate directory")
     print(f"\t{'df_partmove'.ljust(15)} Moves only specific part of data to another folder(sorted by name). Can be helpful in pack creation.")
     print(f"\t{'df_latin'.ljust(15)} This program recursively translits filenames from cyrrilic to latin (and wipes strange unicode symbols).")
-    print(f"\t{'df_partmove'.ljust(15)} Moves only specific part of data to another folder(sorted by name). Can be helpful in pack creation.")
     print(f"\t{'df_bright_sort'.ljust(15)} Sorts(renames with numbers) images by its brightness and returns afterwork.")
     print(f"\t{'df_video_duration'.ljust(15)} This program counts total duration of video in folder.")
     print(f"\t{'df_classcount'.ljust(15)} Count of labels (OBB format) for each class recursive.")

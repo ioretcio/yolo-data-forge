@@ -10,13 +10,12 @@ def merge():
     parser.add_argument("--source", "-s" , help="Path to the folder", type=str)
     parser.add_argument("--destination",'-d', help="File extension to add", type=str)
     args = parser.parse_args()
-    source_folder = args.source_folder
-    destination_folder = args.destination_folder
+    source_folder = args.source
+    destination_folder = args.destination
     
     
     for root, dirs, files in os.walk(source_folder):
         for file in files:
-            # if file.lower().endswith(".mp4"):
             source_path = os.path.join(root, file)
             
             destination_path = os.path.join(destination_folder, file)

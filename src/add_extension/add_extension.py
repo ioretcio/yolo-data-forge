@@ -6,7 +6,7 @@ def add_extension():
     parser = argparse.ArgumentParser(
         description='This program add extension to broken files')
     parser.add_argument("--folder_path", help="Path to the folder", type=str)
-    parser.add_argument("--extension", help="File extension to add", type=str)
+    parser.add_argument("--extension", help="File extension to add (with a point)", type=str)
     args = parser.parse_args()
     folder_path = args.folder_path
     extension = args.extension
