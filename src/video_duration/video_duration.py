@@ -13,10 +13,7 @@ def duration():
     total_duration = 0
     files = os.listdir(directory_path)
     filecount = len(files)
-    
     current = 0
-    
-    
     for filename in os.listdir(directory_path):
         filepath = os.path.join(directory_path, filename)
         if os.path.isfile(filepath) and any(filepath.endswith(ext) for ext in ['.mp4', '.avi', '.mkv', '.mov']):

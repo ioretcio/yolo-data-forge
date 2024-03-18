@@ -20,7 +20,7 @@ def translit(text):
         'С': 'S',        'Т': 'T',        'У': 'U',        'Ф': 'F',        'Х': 'Kh',
         'Ц': 'Ts',        'Ч': 'Ch',        'Ш': 'Sh',        'Щ': 'Shch',        'Ь': '_',
         'Ъ': '_',        'Ю': 'Iu',        'Я': 'Ia', 'Ñ':'N' , ' ':'_', '«':'_', '»':'_',
-        '"':'_'
+        '"':'_', "'":'_'
     }
     for key in cyrillic_to_latin.keys():
         text = text.replace(key, cyrillic_to_latin[key])
