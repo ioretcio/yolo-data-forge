@@ -30,7 +30,7 @@ def main(images_folder,labels_folder, packs_count, packs_name):
         if not os.path.exists(labels_folder):
             os.makedirs(labels_folder)
 
-    for i in range(1, packs_name + 1):
+    for i in range(1, packs_count + 1):
         pack_folder = f'{packs_name}{i:04d}'
         images_folder = os.path.join(pack_folder, 'images')
         labels_folder = os.path.join(pack_folder, 'labels')
