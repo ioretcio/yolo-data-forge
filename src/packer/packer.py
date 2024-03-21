@@ -8,17 +8,10 @@ def dir_path(string):
     if os.path.isdir(string): return string
     else: raise NotADirectoryError(string)
 
-extensions = ['jpg', 'png', 'JPG']
 
-def ends(file):
-    for extension in extensions:
-        if(file.endswith(extension)):
-            return True
-    return False
-
-def main(images_folder,labels_folder, packs_count, packs_name):
-    siz = int(len(os.listdir(images_folder))/packs_count)
-    print(f"I going to create {siz} packs")
+def main(images_source_folder,labels_source_folder, packs_count, packs_name):
+    siz = int(len(os.listdir(images_source_folder))/packs_count)
+    print(f"I going to create packs with {siz} images")
     for i in range(1, packs_count + 1):
         pack_folder = f'{packs_name}{i:04d}'
         images_folder = os.path.join(pack_folder, 'images')
@@ -37,15 +30,17 @@ def main(images_folder,labels_folder, packs_count, packs_name):
         images_folder = os.path.join(pack_folder, 'images')
         labels_folder = os.path.join(pack_folder, 'labels')
         shutil.copy("classes.txt", labels_folder)
-        files = os.listdir(images_folder)
+        files = os.listdir(images_source_folder)
+
         random.shuffle(files)
         for file_name in files[:siz]:
-            file_path = os.path.join(images_folder, file_name)
+            file_path = os.path.join(images_source_folder, file_name)
             destination_path = os.path.join(images_folder, file_name)
+
             if not os.path.exists(destination_path):
                 shutil.move(file_path, destination_path)
                 label_file_name = os.path.splitext(file_name)[0] + '.txt'
-                label_file_path = os.path.join(labels_folder, label_file_name)
+                label_file_path = os.path.join(labels_source_folder, label_file_name)
                 if os.path.exists(label_file_path):
                     destination_label_path = os.path.join(labels_folder, label_file_name)
                     shutil.move(label_file_path, destination_label_path)
