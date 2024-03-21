@@ -18,7 +18,7 @@ def ends(file):
 
 def main(images_folder,labels_folder, packs_count, packs_name):
     siz = int(len(os.listdir(images_folder))/packs_count)
-
+    print(f"I going to create {siz} packs")
     for i in range(1, packs_count + 1):
         pack_folder = f'{packs_name}{i:04d}'
         images_folder = os.path.join(pack_folder, 'images')
@@ -31,7 +31,9 @@ def main(images_folder,labels_folder, packs_count, packs_name):
             os.makedirs(labels_folder)
 
     for i in range(1, packs_count + 1):
+        
         pack_folder = f'{packs_name}{i:04d}'
+        print(f"Now i process {pack_folder}")
         images_folder = os.path.join(pack_folder, 'images')
         labels_folder = os.path.join(pack_folder, 'labels')
         shutil.copy("classes.txt", labels_folder)
