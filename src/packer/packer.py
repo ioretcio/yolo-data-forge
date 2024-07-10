@@ -15,21 +15,24 @@ def main(images_source_folder,labels_source_folder, packs_count, packs_name):
     for i in range(1, packs_count + 1):
         pack_folder = f'{packs_name}{i:04d}'
         images_folder = os.path.join(pack_folder, 'images')
-        labels_folder = os.path.join(pack_folder, 'labels')
+        if labels_source_folder:
+            labels_folder = os.path.join(pack_folder, 'labels')
+            if not os.path.exists(labels_folder):
+                os.makedirs(labels_folder)
         if not os.path.exists(pack_folder):
             os.makedirs(pack_folder)
         if not os.path.exists(images_folder):
             os.makedirs(images_folder)
-        if not os.path.exists(labels_folder):
-            os.makedirs(labels_folder)
+        
 
     for i in range(1, packs_count + 1):
         
         pack_folder = f'{packs_name}{i:04d}'
         print(f"Now i process {pack_folder}")
         images_folder = os.path.join(pack_folder, 'images')
-        labels_folder = os.path.join(pack_folder, 'labels')
-        shutil.copy("classes.txt", labels_folder)
+        if labels_source_folder:
+            labels_folder = os.path.join(pack_folder, 'labels')
+            shutil.copy("classes.txt", labels_folder)
         files = os.listdir(images_source_folder)
 
         random.shuffle(files)
@@ -39,11 +42,12 @@ def main(images_source_folder,labels_source_folder, packs_count, packs_name):
 
             if not os.path.exists(destination_path):
                 shutil.move(file_path, destination_path)
-                label_file_name = os.path.splitext(file_name)[0] + '.txt'
-                label_file_path = os.path.join(labels_source_folder, label_file_name)
-                if os.path.exists(label_file_path):
-                    destination_label_path = os.path.join(labels_folder, label_file_name)
-                    shutil.move(label_file_path, destination_label_path)
+                if labels_source_folder:
+                    label_file_name = os.path.splitext(file_name)[0] + '.txt'
+                    label_file_path = os.path.join(labels_source_folder, label_file_name)
+                    if os.path.exists(label_file_path):
+                        destination_label_path = os.path.join(labels_folder, label_file_name)
+                        shutil.move(label_file_path, destination_label_path)
             
 
 def packer():

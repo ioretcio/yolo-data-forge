@@ -22,7 +22,7 @@ df_filedel = "hashes.delete_apply.delete_apply:deleter"
 df_merge_db = "hashes.merge_db.merge_db:merge"
 
 df_yolo2labelimg_obb = "converters.yolo2labelimg_obb.yolo2labelimg_obb:convert"
-
+df_obb2not_obb = "converters.obb2not_obb.obb2not_obb:convert"
 df_exact_copies = "exact_copies_cleaner.exact_copies_cleaner:exact_cleaner"
 df_decimator = "decimator.decimator:decimator"
 
