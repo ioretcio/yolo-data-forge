@@ -53,6 +53,8 @@ Yolo Data Forge is a specialized toolkit tailored for YOLO (You Only Look Once) 
 
 - [x] convert obb-labelimg
 
+- [x] convert labelimg_obb_2_labelimg
+
 - [ ] convert yolo-labelimg
 
 - [ ] convert dota-labelimg

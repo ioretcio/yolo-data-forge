@@ -5,7 +5,6 @@ import math
 
 classes = dict()
 
-
 def rotate_point(origin, point, angle):
     ox, oy = origin
     px, py = point

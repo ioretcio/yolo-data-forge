@@ -16,6 +16,7 @@ def about():
     print(f"\t1-{'df_sizes_dump'.ljust(15)} Creates a txt file with recursively found and sorted by size files in selected directory.")
     print("\nConverts:")
     print(f"\t{'df_yolo2labelimg_obb'.ljust(15)} Converts from yolo_obb label format detect output to labelimg format.")
+    print(f"\t{'df_obb2not_obb'.ljust(15)} Converts from labelimg_obb label format detect output to labelimg format.")
     print("\nHashes methods")
     print(f"\t{'df_hash_db'.ljust(15)} Creates a database of datasets images hashes (path-MD5hash)")
     print(f"\t{'df_hash_xf'.ljust(15)} Finds the intersection of hashes from database and images in folder")
